@@ -3,3 +3,9 @@
     --size-logo: 2rem;
     --size-navbar: 1.6rem;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
