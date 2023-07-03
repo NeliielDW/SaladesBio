@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { OrderDetailsService } from '../services/order-details.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  constructor (private service : OrderDetailsService) {}
+  foodData : any;
 
+  ngOnInit() {
+    this.foodData = this.service.foodDetails;
+  }
 }
